@@ -1,6 +1,6 @@
 var express = require("express");
 var bodyParser = require("body-parser");
-var methodOverride = require("method-override");
+// var methodOverride = require("method-override");
 
 var port = 3000;
 
@@ -12,7 +12,7 @@ app.use(express.static(process.cwd() + "/public"));
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // Override with POST having ?_method=DELETE
-app.use(methodOverride("_method"));
+// app.use(methodOverride("_method"));
 
 // Set Handlebars.
 var exphbs = require("express-handlebars");
